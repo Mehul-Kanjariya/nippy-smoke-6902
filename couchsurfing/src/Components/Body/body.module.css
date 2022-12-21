@@ -1,0 +1,149 @@
+.shdw,.features>div{
+    position: relative;
+}
+.shadow{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 10rem; */
+}
+.shadow>div{
+    /* width:32%; */
+    background-color: transparent;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px -50px 36px -28px inset;
+}
+.img{
+    /* margin-top: 10rem; */
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 10rem; */
+}
+.img>div{
+    /* width:32%; */
+}
+.img>div>img{
+    width: 100%;
+    height: 100%;
+}
+.offer>div>img{
+    width: 100%;
+    height: 100%;
+}
+.features{
+    /* padding: 0 10rem; */
+    margin-top:2.5rem;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.offer{
+    display: flex;
+    justify-content: space-between
+}
+.offer>div{
+    /* width:23.5% */
+}
+.text{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+}
+.text>div{
+    /* width:23.5%; */
+    height: 100%;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.95) 0px -50px 36px -28px inset;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.text>div>h5,.text>div>p{
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin-left: 1.5rem;
+}
+.text>div>p{
+    margin-bottom: .7rem;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+}
+.help{
+    margin-top: 3rem;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* padding: 0 10rem; */
+}
+.help>div{
+    display: flex;
+    justify-content: space-between;
+}
+.help>div>div{
+    /* width:30.6%; */
+    border:1px solid grey;
+    padding: 0.8rem 0.6rem;
+    background-color:white;
+}
+.help>div p{
+    margin-top: 2%;
+    font-size: 80%;
+}
+.help>div>div>div{
+    display: flex;
+    justify-content: space-between;
+}
+.travel{
+    /* padding: 0 10rem; */
+    margin-top:2.5rem;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.vel{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+.vel>div{
+    /* width:49%; */
+    /* height: 15rem; */
+}
+.vel img{
+    width:100%;
+    height: 100%;
+}
+.travel>div{
+    position:relative;
+}
+.tips{
+    position:absolute;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+}
+.tips>div{
+    /* width:49%; */
+    /* height: 100%; */
+    color:White;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+}    
+.tips>div>div{
+    padding:2rem;
+}
+.tips button{
+    margin-top: 1rem;
+    padding: 0.3rem 1rem;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    font-size: 1rem;
+    font-weight: 600;
+    color:#0c5761;
+}

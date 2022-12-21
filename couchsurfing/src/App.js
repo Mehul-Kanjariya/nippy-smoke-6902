@@ -1,12 +1,13 @@
-import WithSubnavigation from "./AllRoutes/Navbar";
-import Search from './Components/Search';
+import Home from "./Components/Home";
+import { Box } from "@chakra-ui/react";
+import Router from "./AllRoutes/AllRoutes";
 
 function App() {
   return (
-    <div className="App">
-      <WithSubnavigation/>
-      <Search/>
-    </div>
+    <Box className="App" backgroundColor="#f5f5f5">
+      <Router/>
+      {/* <Home/> */}
+    </Box>
   );
 }
 

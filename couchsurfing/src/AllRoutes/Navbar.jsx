@@ -33,11 +33,16 @@ import {
     MenuOptionGroup,
     MenuDivider,
   } from '@chakra-ui/react';
+  import { NavLink } from "react-router-dom";
+  import { AuthContext } from '../Components/AurhContext/AuthContext';
+  import { useContext } from 'react';
+
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
+    const { authState, logoutUser } = useContext(AuthContext);
   
     return (
-      <Box margin={"0px"}>
+      <Box margin={"0px"} zIndex="100">
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
@@ -63,13 +68,14 @@ import {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+            <NavLink to="/">
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
               <Image src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="logo"/>
             </Text>
-  
+            </NavLink>
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
             </Flex>
@@ -119,9 +125,9 @@ import {
                     _hover={{
                         backgroundColor:"#c8337a"
                     }}>
-                        <Center w="100%" h="100%"><h3>Sign in</h3></Center>
+                    <Center w="100%" h="100%">{authState.isAuth ? <Text onClick={logoutUser}>Sign out</Text> : <NavLink to={`/signin`}><h3>Sign in</h3></NavLink>}</Center>
                     </MenuItem>
-                    <MenuItem><Center w="100%" h="100%">Create a free account</Center></MenuItem>
+                    <MenuItem><Center w="100%" h="100%"><NavLink to={`/signup`}>Create a free account</NavLink></Center></MenuItem>
                     <MenuItem><Center w="100%" h="100%">Admin Panel</Center></MenuItem>
             </MenuList>
             </Menu>
@@ -161,7 +167,7 @@ import {
               </PopoverTrigger>
   
               {navItem.children && (
-                <PopoverContent
+                <PopoverContent 
                   border={0}
                   boxShadow={'xl'}
                   bg={popoverContentBgColor}
@@ -235,7 +241,7 @@ import {
   
     return (
       <Stack spacing={4} onClick={children && onToggle}>
-        <Flex
+        <Flex 
           py={2}
           as={Link}
           href={href ?? '#'}
