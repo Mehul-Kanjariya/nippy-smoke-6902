@@ -28,3 +28,6 @@
 - Gain excessive knowledge on application of React.js, DOM manipulation and Chakra UI.
 - Enjoyed the process of learning and creating the application.
 
+# Contributor
+#### Kanjariya Mehul Kumar
+>[GitHub](https://github.com/Mehul-Kanjariya)
